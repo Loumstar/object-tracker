@@ -1,18 +1,12 @@
-from typing import List, NamedTuple, Optional, Tuple
+from typing import List, Optional, Tuple
 
 import cv2
 from numpy import ndarray
 
-
-class DetectedObject(NamedTuple):
-    id:  Optional[int]
-    label: str
-    x: Tuple[int, int]
-    y: Tuple[int, int]
+from .detection import FrameObjects
 
 
 class VideoAnnotater:
-    FrameObjects = List[DetectedObject]
     VideoObjects = List[FrameObjects]
     ImageSize = Tuple[int, int]
 
